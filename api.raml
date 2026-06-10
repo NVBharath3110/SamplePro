@@ -2,7 +2,6 @@
 title: Sample API
 version: v1
 baseUri: http://localhost:8081/api
-
 /users:
   get:
     description: Get all users
@@ -13,4 +12,15 @@ baseUri: http://localhost:8081/api
             example:
               [
                 { "id": 1, "name": "Bharath" }
+              ]
+/products:
+  get:
+    description: Get all products
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              [
+                { "id": 1, "product": "Laptop" }
               ]
