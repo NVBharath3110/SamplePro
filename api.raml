@@ -13,6 +13,25 @@ baseUri: http://localhost:8081/api
               [
                 { "id": 1, "name": "Bharath" }
               ]
+  post:
+    description: Create a new user
+    body:
+      application/json:
+        example:
+          {
+            "id": 2,
+            "name": "Venkata"
+          }
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "message": "User created successfully",
+                "id": 2,
+                "name": "Venkata"
+              }
 /products:
   get:
     description: Get all products
@@ -24,3 +43,22 @@ baseUri: http://localhost:8081/api
               [
                 { "id": 1, "product": "Laptop" }
               ]
+  post:
+    description: Create a new product
+    body:
+      application/json:
+        example:
+          {
+            "id": 2,
+            "product": "Mobile"
+          }
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "message": "Product created successfully",
+                "id": 2,
+                "product": "Mobile"
+              }
